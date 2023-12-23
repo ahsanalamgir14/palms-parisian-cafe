@@ -53,6 +53,9 @@
         "sales_report": "Sales Report",
         "items_report": "Items Report",
         "online_orders": "Online Orders",
+        "reservations": "Reservations",
+        "reservation": "Reservation",
+        "reserve_a_table": "Reserve a Table",
         "edit_profile": "Edit Profile",
         "profile": "Profile",
         "password": "Password",
@@ -500,7 +503,11 @@
         "skrill_merchant_email": "Skrill Merchant Email",
         "skrill_merchant_api_password": "Skrill Merchant Api Password",
         "skrill_mode": "Skrill Mode",
-        "skrill_status": "Skrill Status"
+        "skrill_status": "Skrill Status",
+        "reservations": "Reservations",
+        "reserve_a_table": "Reserve a Table",
+        "reservation_date_time": "Reservation Date",
+        "no_of_guests": "No of Guests"
     },
     "button": {
         "add": "Add",
@@ -582,7 +589,9 @@
         "delivered_orders": "Delivered Orders",
         "go_home": "Go Home",
         "get_file_content" : "Get File Content",
-        "let_me_check" : "Let me check"
+        "let_me_check" : "Let me check",
+        "add_reservation": "Add Reservation",
+        "confirm_reservation": "Confirm Reservation"
     },
     "number": {
         "10": "10",

@@ -615,3 +615,6 @@
 .lab-delivered-orders:before {
   content: "\e093";
 }
+.lab-icon-tablet:before {
+  content: "\e00c";
+}

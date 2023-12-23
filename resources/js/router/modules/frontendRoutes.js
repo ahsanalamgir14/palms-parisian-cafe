@@ -1,6 +1,7 @@
 import HomeComponent from "../../components/frontend/home/HomeComponent";
 import MenuComponent from "../../components/frontend/menu/MenuComponent";
 import OffersComponent from "../../components/frontend/offers/OffersComponent";
+import ProfileComponent from "../../components/frontend/reservations/ProfileComponent";
 import OffersItemComponent from "../../components/frontend/offers/OffersItemComponent";
 import PageComponent from "../../components/frontend/page/PageComponent";
 import EditProfileComponent from "../../components/frontend/account/editProfile/EditProfileComponent";
@@ -35,6 +36,15 @@ export default [
         path: "/offers",
         component: OffersComponent,
         name: "frontend.offers",
+        meta: {
+            isFrontend: true,
+            auth: false,
+        },
+    },
+    {
+        path: "/reservations",
+        component: ProfileComponent,
+        name: "frontend.reservations",
         meta: {
             isFrontend: true,
             auth: false,

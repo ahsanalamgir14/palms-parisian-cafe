@@ -49,6 +49,12 @@
                              class="capitalize text-sm font-medium text-heading">
                     {{ $t('label.offers') }}
                 </router-link>
+                <router-link :to="{ name: 'frontend.reservations' }"
+                    id="res-web"
+                    :class="checkIsPathAndRoutePathSame('/reservations') ? 'text-primary' : ''"
+                    class="capitalize text-sm font-medium text-heading">
+                    {{ $t('label.reserve_a_table') }}
+                </router-link>
             </nav>
 
             <div class="flex flex-col items-center justify-end gap-3 w-full mt-2 lg:flex-row lg:w-fit lg:mt-0">

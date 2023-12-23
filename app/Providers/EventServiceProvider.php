@@ -9,6 +9,7 @@ use App\Events\SendOrderGotMail;
 use App\Events\SendOrderGotPush;
 use App\Events\SendOrderGotSms;
 use App\Events\SendOrderMail;
+use App\Events\SendReservationMail;
 use App\Events\SendOrderPush;
 use App\Events\SendOrderSms;
 use App\Events\SendResetPassword;
@@ -20,6 +21,7 @@ use App\Listeners\SendOrderGotMailNotification;
 use App\Listeners\SendOrderGotPushNotification;
 use App\Listeners\SendOrderGotSmsNotification;
 use App\Listeners\SendOrderMailNotification;
+use App\Listeners\SendReservationMailNotification;
 use App\Listeners\SendOrderPushNotification;
 use App\Listeners\SendOrderSmsNotification;
 use App\Listeners\SendResetPasswordNotification;
@@ -49,6 +51,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         SendOrderMail::class            => [
             SendOrderMailNotification::class
+        ],
+        SendReservationMail::class            => [
+            SendReservationMailNotification::class
         ],
         SendOrderSms::class             => [
             SendOrderSmsNotification::class

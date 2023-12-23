@@ -25,6 +25,7 @@ class NotificationAlertTableSeeder extends Seeder
             'Order Returned Message',
             'Delivery Boy After Assign Message',
             'Admin And Branch Manager New Order Message',
+            'Reservation Confirmation Message',
         ],
         'message' => [
             'Your order is successfully placed.',
@@ -37,6 +38,7 @@ class NotificationAlertTableSeeder extends Seeder
             'Your order is Returned.',
             'You have been assigned an order for delivery.',
             'You have a new order.',
+            'Your reservation is confirmed.',
         ]
 
     ];

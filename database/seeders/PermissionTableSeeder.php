@@ -91,6 +91,14 @@ class PermissionTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
+                'title'      => 'Reservations',
+                'name'       => 'reservations',
+                'guard_name' => 'sanctum',
+                'url'        => 'reservations',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'title'      => 'Coupons',
                 'name'       => 'coupons',
                 'guard_name' => 'sanctum',
@@ -435,6 +443,11 @@ class PermissionTableSeeder extends Seeder
         ];
 
         $permissions = AppLibrary::associativeToNumericArrayBuilder($permissions);
-        Permission::insert($permissions);
+        foreach ($permissions as $permission) {
+            Permission::updateOrInsert(
+                ['name' => $permission['name'], 'guard_name' => $permission['guard_name']],
+                $permission
+            );
+        }
     }
 }

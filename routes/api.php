@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\SiteController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\OfferController;
 use App\Http\Controllers\Admin\OnlineOrderController;
+use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\ThemeController;
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\CouponController;
@@ -142,6 +143,10 @@ Route::prefix('profile')->name('profile.')->middleware(['installed', 'apiKey', '
     Route::match(['put', 'patch'], '/', [ProfileController::class, 'update']);
     Route::match(['put', 'patch'], '/change-password', [ProfileController::class, 'changePassword']);
     Route::post('/change-image', [ProfileController::class, 'changeImage']);
+});
+
+Route::prefix('reservations')->name('reservations.')->group(function () {
+    Route::post('/add-reservation', [ReservationController::class, 'store']);
 });
 
 Route::prefix('admin')->name('admin.')->middleware(['installed', 'apiKey', 'auth:sanctum', 'localization'])->group(function () {
@@ -480,6 +485,17 @@ Route::prefix('admin')->name('admin.')->middleware(['installed', 'apiKey', 'auth
         Route::post('/change-status/{order}', [OnlineOrderController::class, 'changeStatus']);
         Route::post('/change-payment-status/{order}', [OnlineOrderController::class, 'changePaymentStatus']);
         Route::post('/select-delivery-boy/{order}', [OnlineOrderController::class, 'selectDeliveryBoy']);
+    });
+
+    Route::prefix('reservations')->name('reservations.')->group(function () {
+        Route::get('/', [ReservationController::class, 'index']);
+        Route::get('/show/{order}', [ReservationController::class, 'show']);
+        Route::delete('/{order}', [ReservationController::class, 'destroy']);
+        Route::get('/export', [ReservationController::class, 'export']);
+        Route::post('/change-status/{order}', [ReservationController::class, 'changeStatus']);
+        Route::post('/change-payment-status/{order}', [ReservationController::class, 'changePaymentStatus']);
+        Route::post('/select-delivery-boy/{order}', [ReservationController::class, 'selectDeliveryBoy']);
+        Route::post('/add-reservation', [ReservationController::class, 'store']);
     });
 
     Route::prefix('push-notification')->name('push-notification.')->group(function () {

@@ -11,6 +11,7 @@ import {offer} from "./modules/offer";
 import {item} from "./modules/item";
 import {itemVariation} from "./modules/itemVariation";
 import {onlineOrder} from "./modules/onlineOrder";
+import {reservations} from "./modules/reservations";
 import {tax} from "./modules/tax";
 import {currency} from "./modules/currency";
 import {mail} from "./modules/mail";
@@ -60,6 +61,7 @@ import { salesReport } from './modules/salesReport';
 import {frontendCart} from "./modules/frontend/frontendCart";
 import { itemsReport } from './modules/itemsReport';
 import { frontendEditProfile } from './modules/frontend/frontendEditProfile';
+import { frontendAddReservation } from './modules/frontend/frontendAddReservation';
 import { frontendCountryCode } from './modules/frontend/frontendCountryCode';
 import { frontendAddress } from './modules/frontend/frontendAddress';
 import { message } from './modules/message';
@@ -105,6 +107,7 @@ export default new createStore({
         notification,
         page,
         onlineOrder,
+        reservations,
         menuSection,
         menuTemplate,
         coupon,
@@ -148,6 +151,7 @@ export default new createStore({
         salesReport,
         itemsReport,
         frontendEditProfile,
+        frontendAddReservation,
         frontendCountryCode,
         frontendAddress,
         message,

@@ -15,6 +15,10 @@
         <div class="container">
             <div class="flex items-center justify-between gap-2 mb-6 mt-4">
                 <h2 class="text-2xl font-semibold capitalize">{{ $t("label.our_menu") }}</h2>
+                <router-link :to="{ name: 'frontend.reservations' }"
+                    class="ml-auto rounded-3xl capitalize text-sm leading-6 font-medium py-1 px-3 transition text-primary bg-[#FFEDF4] hover:text-white hover:bg-primary" id="res-mobile">
+                    {{ $t('label.reserve_a_table') }}
+                </router-link>
                 <router-link :to="{ name: 'frontend.menu', query: { s: categoryProps.slug } }"
                     class="rounded-3xl capitalize text-sm leading-6 font-medium py-1 px-3 transition text-primary bg-[#FFEDF4] hover:text-white hover:bg-primary">
                     {{ $t("button.view_all") }}
@@ -106,3 +110,11 @@ export default {
     },
 };
 </script>
+
+<style>
+    @media only screen and (min-width: 900px) {
+        #res-mobile {
+            display: none !important;
+        }
+    }
+</style>

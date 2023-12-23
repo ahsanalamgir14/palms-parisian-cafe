@@ -40,6 +40,8 @@ return [
         'user'             => 'User',
         'title'            => 'Title',
         'all_items'        => 'All Items',
+        'no_of_guests'        => 'No of Guests',
+        'reservation_date_time'        => 'Reservation Date'
     ],
     'message' => [
         'validation_error'            => 'Validation Error.',

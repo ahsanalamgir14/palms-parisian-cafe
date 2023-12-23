@@ -27,6 +27,7 @@ class RolePermissionTableSeeder extends Seeder
                 ['name' => 'pos'],
                 ['name' => 'pos-orders'],
                 ['name' => 'online-orders'],
+                ['name' => 'reservations'],
                 ['name' => 'push-notifications'],
                 ['name' => 'push-notifications_create'],
                 ['name' => 'push-notifications_edit'],

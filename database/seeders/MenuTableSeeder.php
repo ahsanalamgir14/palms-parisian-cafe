@@ -79,7 +79,30 @@ class MenuTableSeeder extends Seeder
                         'created_at' => now(),
                         'updated_at' => now()
 
-                    ]
+                    ],
+                ],
+            ],
+            [
+                'name'       => 'Reservations',
+                'language'   => 'reservations',
+                'url'        => '#',
+                'icon'       => 'lab lab-pos',
+                'priority'   => 100,
+                'status'     => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+                'children'   => [
+                    [
+                        'name'       => 'Reservations',
+                        'language'   => 'reservations',
+                        'url'        => 'reservations',
+                        'icon'       => 'lab lab-online-orders',
+                        'priority'   => 100,
+                        'status'     => 1,
+                        'created_at' => now(),
+                        'updated_at' => now()
+
+                    ],
                 ],
             ],
             [
